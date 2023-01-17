@@ -1,0 +1,885 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto"; */
+  
+
+}
+
+p{
+  
+  font-family: Arial,sans-serif;
+  line-height: 1.5rem;
+}
+
+hr.me {
+  border: 0.5px solid #ccc;
+  width: 100%;
+  margin: 3rem 5rem;
+}
+
+hr.meso {
+  border: 0.5px solid #ccc;
+  width: 100%;
+  margin: 0 5rem 3rem 5rem;
+}
+
+hr.soi {
+  border: 0.5px solid #ccc;
+  width: 100%;
+  margin: 0 5rem 0.7rem 5rem;
+}
+
+hr.ilfo {
+  border: 0.5px solid #ccc;
+  width: 100%;
+  margin: 0.7rem 5rem;
+}
+
+body {
+  width: 100vw;
+  background: linear-gradient(45deg, #fff 0%, #d7e1ec 74%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+div.menu-mobil {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 25px;
+  display: none;
+}
+div.menu-mobil div.menu-buton {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.menu-mobil div.menu-buton div.mbtn1,
+div.menu-mobil div.menu-buton div.mbtn2,
+div.menu-mobil div.menu-buton div.mbtn3 {
+  position: relative;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+div.menu-mobil div.menu-buton.active div.mbtn div.mbtn2 {
+  opacity: 0;
+}
+div.menu-mobil div.menu-buton.active div.mbtn div.mbtn1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+div.menu-mobil div.menu-buton.active div.mbtn div.mbtn3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+div.menu-mobil div.menu-mbl {
+  z-index: -1;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: none;
+  padding-top: 60px;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+div.menu-mobil div.menu-mbl a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 15px 0 15px 10px;
+  border-bottom: 1px dashed black;
+}
+div.menu-mobil div.menu-mbl a.ilk {
+  border-top: 1px dashed black;
+}
+div.menu-mobil div.menu-mbl a:nth-child(even) {
+  background-color: #bbb;
+}
+div.menu-mobil div.menu-mbl a:nth-child(odd) {
+  background-color: #ddd;
+}
+div.menu-mobil div.menu-mbl.active {
+  display: block;
+}
+div.menu-mobil img.mlogo {
+  width: 30%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+nav.navbar {
+  width: 80%;
+  padding: 0 30px;
+}
+nav.navbar div.nav-container {
+  width: 100%;
+  height: 100%;
+}
+nav.navbar div.nav-container div.nav-bar {
+  margin: 30px 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav.navbar div.nav-container div.nav-bar div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+nav.navbar div.nav-container div.nav-bar div a.nav-link {
+  margin: 20px 0 0 0;
+  font-size: 14pt;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+nav.navbar div.nav-container div.nav-bar div.mid img {
+  height: 130px;
+}
+nav.navbar div.nav-container div.nav-bar div.right {
+  text-align: right;
+}
+
+div.top-container {
+  margin-bottom: 30px;
+}
+div.top-container div.video video.video {
+  border-radius: 40px;
+}
+
+div.icerik-container div.baslik {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces";
+}
+div.icerik-container div.baslik h1 {
+  font-size: 3rem;
+}
+div.icerik-container div.kart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 30px;
+}
+div.icerik-container div.kart-container div.kartlar {
+  transition: all 0.3s ease-in-out;
+  font-family: "Roboto";
+  height: 20rem;
+  max-height: 25rem;
+  overflow: hidden;
+  width: 30%;
+  background-color: #d7e1ec;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 5%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+div.icerik-container div.kart-container div.kartlar:hover {
+  transform: scale(1.035);
+}
+div.icerik-container div.kart-container div.kartlar div.kart-govde {
+  padding: 1rem;
+}
+div.icerik-container div.kart-container div.kartlar div.kart-govde p.kart {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 15px;
+}
+div.icerik-container div.kart-container div.kartlar div.kart-govde p.isim {
+  line-height: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.icerik-container div.isletme-sahibi {
+  background-color: #e0eaf8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 0 1.5rem;
+  margin: 3rem 5rem;
+  border-radius: 10px;
+}
+div.icerik-container div.isletme-sahibi p.isletme {
+  font-family: "Fraunces";
+  font-size: x-large;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+div.icerik-container div.isletme-sahibi p.isim {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: large;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+div.icerik-container div.hikaye {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 5rem;
+}
+div.icerik-container div.hikaye div.hikaye-icerik {
+  width: auto;
+}
+div.icerik-container div.hikaye div.hikaye-icerik h3 {
+  font-size: calc(1.3rem + 0.6vw);
+  font-family: "Roboto";
+  font-style: italic;
+  padding-bottom: 0.7rem;
+}
+div.icerik-container div.hikaye div.hikaye-icerik p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+div.icerik-container div.hikaye div.hikaye-resim {
+  margin-left: 2rem;
+}
+div.icerik-container div.hikaye div.hikaye-resim img {
+  width: 100%;
+}
+
+h3.m {
+  /* font-family: "Fraunces"; */
+  font-family: fraunces_120pt-semibold,serif;
+  font-size: 5rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+div.menu-container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.menu-container div.men {
+  display: flex;
+  margin-bottom: 4rem;
+  justify-content: space-around;
+}
+div.menu-container div.men.il {
+  flex-direction: row;
+}
+div.menu-container div.men.il div.resim {
+  justify-content: start;
+}
+div.menu-container div.men.ir {
+  flex-direction: row-reverse;
+}
+div.menu-container div.men.ir div.resim {
+  justify-content: end;
+}
+div.menu-container div.men div.resim {
+  display: flex;
+  width: 50%;
+}
+div.menu-container div.men div.resim img {
+  max-height: 25rem;
+  border-radius: 4rem;
+  max-width: 30rem;
+}
+div.menu-container div.men div.icerik {
+  width: 50%;
+  font-family: "Roboto";
+  font-size: 1rem;
+  text-align: justify;
+  padding: 0 15px;
+}
+div.menu-container div.men div.icerik h3 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.75rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+div.sosyal-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+div.sosyal-container div.organizasyon {
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+div.sosyal-container div.organizasyon div.kart {
+  background-color: #d7e1ec;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 1rem 2rem;
+}
+div.sosyal-container div.organizasyon div.kart h3 {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+div.sosyal-container div.organizasyon div.kart hr.ara {
+  margin: 0 0 1rem 0;
+}
+div.sosyal-container div.organizasyon div.kart p {
+  font-family: "Roboto";
+  line-height: 1.5rem;
+}
+div.sosyal-container div.organizasyon:hover {
+  transform: scale(1.035);
+}
+div.sosyal-container div.sosyal-medya {
+  margin-left: 50px;
+}
+div.sosyal-container div.sosyal-medya h3 {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+div.sosyal-container div.sosyal-medya div.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a {
+  text-decoration: none;
+  width: 50px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button {
+  margin-top: 10px;
+  background: white;
+  color: #0d6efd;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container {
+  width: 100%;
+  height: 100%;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic i {
+  font-size: 22pt;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin {
+  margin-left: 60px;
+  font-size: 16pt;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.instagram-link {
+  align-items: center;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.instagram-link svg {
+  height: 25px;
+  color: #555;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.facebook-link img {
+  height: 40px;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.youtube-link {
+  margin-left: 70px;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.youtube-link img {
+  height: 20px;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin.whatsapp-link {
+  font-family: Helvetica;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-left: 70px;
+  color: #25D366;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover {
+  width: 200px;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover div.button div.icon-container div.icon div.ic i {
+  font-size: 26pt;
+  color: white;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover div.button div.icon-container div.icon div.ic.instagram {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f09433", endColorstr="#bc1888", GradientType=1);
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover div.button div.icon-container div.icon div.ic.facebook {
+  background-color: #3b5998;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover div.button div.icon-container div.icon div.ic.youtube {
+  background-color: red;
+}
+div.sosyal-container div.sosyal-medya div.wrapper a:hover div.button div.icon-container div.icon div.ic.whatsapp {
+  background-color: #25D366;
+}
+
+div.iletisim-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+div.iletisim-container div.adres-card {
+  transition: all 0.3s ease-in-out;
+  font-family: "Roboto";
+  height: 20rem;
+  width: 25rem;
+  background-color: #d7e1ec;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 5%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+div.iletisim-container div.adres-card:hover {
+  transform: scale(1.035);
+}
+div.iletisim-container div.adres-card div.card {
+  margin: 20px;
+  width: 100%;
+}
+div.iletisim-container div.adres-card div.card h3 {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+div.iletisim-container div.adres-card div.card hr {
+  width: 100%;
+  margin: 1rem 0;
+}
+div.iletisim-container div.adres-card div.card h5 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+div.iletisim-container div.adres-card div.card a {
+  text-decoration: none;
+  display: inline-block;
+  width: 40px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+div.iletisim-container div.adres-card div.card a div.button {
+  margin-top: 10px;
+  background-color: white;
+  color: #0d6efd;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+}
+div.iletisim-container div.adres-card div.card a div.button div.icon-container {
+  width: 100%;
+  height: 100%;
+}
+div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon div.ic {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon div.ic i {
+  font-size: 20pt;
+}
+div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon span.lin {
+  margin-left: 50px;
+  font-size: 13pt;
+  font-family: Helvetica;
+  font-size: 14pt;
+  font-weight: bold;
+  color: #25D366;
+}
+div.iletisim-container div.adres-card div.card a:hover {
+  width: 160px;
+}
+div.iletisim-container div.adres-card div.card a:hover div.button div.icon-container div.icon div.ic i {
+  font-size: 22pt;
+  color: white;
+}
+div.iletisim-container div.adres-card div.card a:hover div.button div.icon-container div.icon div.ic.whatsapp {
+  background-color: #25D366;
+}
+div.iletisim-container div.harita-card h3 {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+div.iletisim-container div.harita-card hr {
+  width: 100%;
+  margin: 1rem 0;
+}
+div.iletisim-container div.harita-card iframe {
+  width: 600px;
+}
+
+div.footer {
+  width: 100%;
+  position: relative;
+}
+div.footer div.foot-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+div.footer div.foot-row div.hakkimizda {
+  width: 40%;
+  height: 100%;
+  padding: 10px;
+}
+div.footer div.foot-row div.hakkimizda h4 {
+  font-size: 16pt;
+  margin-bottom: 0.7rem;
+}
+div.footer div.foot-row div.hakkimizda p {
+  text-align: justify;
+  text-indent: 1.5rem;
+  font-size: 1rem;
+}
+div.footer div.foot-row div.foot-link {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div.footer div.foot-row div.foot-link div.sol,
+div.footer div.foot-row div.foot-link div.sag {
+  width: 50%;
+  height: 100%;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust,
+div.footer div.foot-row div.foot-link div.sol div.alt,
+div.footer div.foot-row div.foot-link div.sag div.ust,
+div.footer div.foot-row div.foot-link div.sag div.alt {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust a,
+div.footer div.foot-row div.foot-link div.sol div.alt a,
+div.footer div.foot-row div.foot-link div.sag div.ust a,
+div.footer div.foot-row div.foot-link div.sag div.alt a {
+  font-size: 24pt;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust a.whatsapp,
+div.footer div.foot-row div.foot-link div.sol div.alt a.whatsapp,
+div.footer div.foot-row div.foot-link div.sag div.ust a.whatsapp,
+div.footer div.foot-row div.foot-link div.sag div.alt a.whatsapp {
+  background-color: #25D366;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust a.facebook,
+div.footer div.foot-row div.foot-link div.sol div.alt a.facebook,
+div.footer div.foot-row div.foot-link div.sag div.ust a.facebook,
+div.footer div.foot-row div.foot-link div.sag div.alt a.facebook {
+  background-color: #3b5998;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust a.youtube,
+div.footer div.foot-row div.foot-link div.sol div.alt a.youtube,
+div.footer div.foot-row div.foot-link div.sag div.ust a.youtube,
+div.footer div.foot-row div.foot-link div.sag div.alt a.youtube {
+  background-color: #f00;
+}
+div.footer div.foot-row div.foot-link div.sol div.ust a.instagram,
+div.footer div.foot-row div.foot-link div.sol div.alt a.instagram,
+div.footer div.foot-row div.foot-link div.sag div.ust a.instagram,
+div.footer div.foot-row div.foot-link div.sag div.alt a.instagram {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f09433", endColorstr="#bc1888", GradientType=1);
+}
+div.footer div.foot-row div.adres-card {
+  width: 40%;
+  text-align: start;
+  padding: 10px 25px;
+}
+div.footer div.foot-row div.adres-card h4 {
+  font-size: 18pt;
+  font-weight: 400;
+}
+div.footer div.foot-row div.adres-card hr {
+  width: 100%;
+  margin: 0.7rem 0;
+}
+div.footer div.foot-row div.adres-card p span {
+  font-weight: bold;
+}
+div.footer div.foot-row div.adres-card p.telefon {
+  margin-top: 10px;
+}
+
+div.coded-by {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  color: #999;
+  
+}
+
+div.coded-by a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  hr.me {
+    margin: 1rem;
+  }
+  div.container {
+    width: 95vw;
+    overflow-x: hidden;
+  }
+  div.menu-mobil {
+    display: flex;
+    z-index: 3;
+  }
+  nav.navbar {
+    display: none;
+  }
+  div.top-container {
+    margin-bottom: 10px;
+  }
+  div.icerik-container div.baslik {
+    margin-top: 3rem;
+  }
+  div.icerik-container div.baslik h1 {
+    font-size: 6.5vw;
+    font-weight: bolder;
+  }
+  div.icerik-container div.kart-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+  div.icerik-container div.kart-container div.kartlar {
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+  }
+  div.icerik-container div.isletme-sahibi {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  div.icerik-container div.hikaye {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  div.icerik-container div.hikaye div.hikaye-resim {
+    margin: 0;
+    align-self: center;
+  }
+  div.icerik-container div.hikaye div.hikaye-resim img {
+    width: 100%;
+  }
+  div.icerik-container div.hikaye div.hikaye-icerik {
+    width: 95%;
+    margin-top: 10px;
+  }
+  h3.m {
+    font-size: 3rem;
+    margin: 0;
+  }
+  div.menu-container {
+    padding: 0;
+  }
+  div.menu-container div.men {
+    align-items: center;
+  }
+  div.menu-container div.men.il {
+    flex-direction: column;
+  }
+  div.menu-container div.men.ir {
+    flex-direction: column;
+  }
+  div.menu-container div.men div.resim {
+    width: 95%;
+  }
+  div.menu-container div.men div.resim img {
+    width: 100%;
+  }
+  div.menu-container div.men div.icerik {
+    width: 100%;
+    margin-top: 20px;
+  }
+  div.sosyal-container {
+    flex-direction: column;
+  }
+  div.sosyal-container div.organizasyon {
+    width: 100%;
+  }
+  div.sosyal-container div.sosyal-medya {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  div.sosyal-container div.sosyal-medya h3 {
+    text-align: center;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a {
+    width: 60px;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button {
+    height: 60px;
+    border-radius: 30px;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic i {
+    font-size: 26pt;
+    color: white;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic.instagram {
+    background: #f09433;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f09433", endColorstr="#bc1888", GradientType=1);
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic.facebook {
+    background-color: #3b5998;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic.youtube {
+    background-color: red;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon div.ic.whatsapp {
+    background-color: #25D366;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a div.button div.icon-container div.icon span.lin {
+    margin: 0;
+    display: none;
+  }
+  div.sosyal-container div.sosyal-medya div.wrapper a:hover {
+    width: 60px;
+  }
+  div.iletisim-container {
+    margin-top: 1px;
+    width: 100%;
+    flex-direction: column;
+  }
+  div.iletisim-container div.adres-card {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  div.iletisim-container div.adres-card div.card a {
+    width: 50px;
+  }
+  div.iletisim-container div.adres-card div.card a div.button {
+    height: 50px;
+    border-radius: 25px;
+  }
+  div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon div.ic {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #25D366;
+  }
+  div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon div.ic i {
+    font-size: 24pt;
+    color: white;
+  }
+  div.iletisim-container div.adres-card div.card a div.button div.icon-container div.icon span.lin {
+    display: none;
+  }
+  div.iletisim-container div.adres-card div.card a:hover {
+    width: 50px;
+  }
+  div.iletisim-container div.harita-card {
+    margin-top: 2rem;
+  }
+  div.iletisim-container div.harita-card iframe {
+    width: 100%;
+  }
+  div.footer div.foot-row {
+    flex-direction: column;
+  }
+  div.footer div.foot-row div.hakkimizda {
+    width: 100%;
+  }
+  div.footer div.foot-row div.foot-link {
+    width: 100%;
+    height: auto;
+  }
+  div.footer div.foot-row div.adres-card {
+    width: 100%;
+  }
+}
